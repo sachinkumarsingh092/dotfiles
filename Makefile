@@ -1,6 +1,6 @@
 # Usage:
 # make dry-run: output the files to be updated without any actual change.
-# make sync   : synchronize the dotfiles files with the local dotfiles files.
+# make sync   : synchronize the dotfiles files with the local dotfiles.
 #
 
 dry-run:

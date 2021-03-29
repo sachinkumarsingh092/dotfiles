@@ -1,4 +1,4 @@
-"Discription: Easiest way to learn vim --> rm vim &&  ln -s /usr/bin/nano /usr/bin/vim
+"Discription: Easiest way to learn vim ==> remove vim -> ln -s /usr/bin/nano /usr/bin/vim
 "------------------------------------------------------------
 " > Features 
 " Enble syntax highlighting
