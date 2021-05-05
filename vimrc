@@ -15,6 +15,7 @@ set clipboard=unnamedplus
 
 " Highlight searches
 set hlsearch
+highlight Search cterm=NONE ctermfg=grey ctermbg=blue
 
 " Use case insensitive search, except when using capital letters
 set ignorecase

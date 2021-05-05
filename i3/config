@@ -287,9 +287,26 @@ bindsym $mod+Control+l exec i3lock -i ~/Pictures/anime-wallpapers/silence.png
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork -i ~/Pictures/anime-wallpapers/silence.png
 
+# redshift modes
+bindsym $mod+n mode "$mode_redshift"
+set $mode_redshift Set colour temperature: (a)uto, (r)eset, (2)500K, (3)000K, (4)000K, (5)000K
+set $kill_redshift pkill -9 redshift;
+mode "$mode_redshift" {
+    bindsym a exec --no-startup-id "$kill_redshift redshift -P -t 5000:4000", mode "default"
+    bindsym r exec --no-startup-id "$kill_redshift redshift -x", mode "default"
+    bindsym 2 exec --no-startup-id "$kill_redshift redshift -P -O 2500", mode "default"
+    bindsym 3 exec --no-startup-id "$kill_redshift redshift -P -O 3000", mode "default"
+    bindsym 4 exec --no-startup-id "$kill_redshift redshift -P -O 4000", mode "default"
+    bindsym 5 exec --no-startup-id "$kill_redshift redshift -P -O 5000", mode "default"
+ 
+    # exit mode: "Enter" or "Escape"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
 # Auto Run On Boot
-exec_always feh --bg-scale /home/sachin/Pictures/wallpaper.jpg
-exec xinput set-prop 13 359 1 #touchpad tap click
-exec --no-startup-id redshift -O 3000 #redshift 
+exec_always --no-startup-id feh --bg-scale /home/sachin/Pictures/wallpaper.jpg
+exec --no-startup-id xinput set-prop 13 359 1 #touchpad tap click
+exec --no-startup-id safeeyes -e &> /dev/null & # safeeyes
 exec_always --no-startup-id picom --config ~/.config/picom/picom.conf #picom compositor
 # exec_always --no-startup-id ~/.config/polybar/launch.sh #polybar

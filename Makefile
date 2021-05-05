@@ -12,6 +12,7 @@ dry-run:
 	rsync -anvP  i3status/ ~/.config/i3status;
 	rsync -anvP picom/ ~/.config/picom;
 	rsync -anvP polybar/ ~/.config/polybar;
+	rsync -anvP vimrc ~/.config/nvim/init.vim
 
 
 sync:
@@ -23,3 +24,4 @@ sync:
 	rsync -azP  i3status/ ~/.config/i3status;
 	rsync -azP picom/ ~/.config/picom;
 	rsync -azP polybar/ ~/.config/polybar;
+	rsync -azP vimrc ~/.config/nvim/init.vim
