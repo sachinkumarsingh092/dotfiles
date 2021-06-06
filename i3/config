@@ -308,5 +308,5 @@ mode "$mode_redshift" {
 exec_always --no-startup-id feh --bg-scale /home/sachin/Pictures/wallpaper.jpg
 exec --no-startup-id xinput set-prop 13 359 1 #touchpad tap click
 exec --no-startup-id safeeyes -e &> /dev/null & # safeeyes
-exec_always --no-startup-id picom --config ~/.config/picom/picom.conf #picom compositor
+exec_always --no-startup-id picom --config --experimental-backend ~/.config/picom/picom.conf #picom compositor
 # exec_always --no-startup-id ~/.config/polybar/launch.sh #polybar
